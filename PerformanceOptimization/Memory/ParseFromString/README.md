@@ -8,7 +8,7 @@ Strings are heap allocated thus this approach places more strain on the GC also 
 
 ### Optimized implementation analysis
 Using ``Span<char>`` significantly reduces allocations, only using stack allocated pointers.
-![benchmark__resuts(./benchmark_results.png)]
+![benchmark__resuts](./benchmark_results.png)
 
 ### Potential Pitfalls
 Stack overflow: ``span.Slice()`` creates a new span on the stack each time it's executed.
